@@ -37,23 +37,19 @@ section {
 }
 section#dados {
     display: flex;
-    padding: 10px 0;
-    
+    padding: 10px 0;   
 }
 section#dados div {
-    
     display: flex;
     flex-direction: column;
     height: 150px;
     padding: 20px;
-    
 }
 section#dados label {
     color: var(--Smokeygrey);
     font-weight: bold;
 }
 section#dados div input {
-    
     width: 130px;
     height: 60px;
     font-size: 30px;
@@ -101,8 +97,7 @@ section#res div button {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.7s;
-    
+    transition: 0.7s;  
 }
 section#res div button:hover {
     background-color: var(--Offblack);

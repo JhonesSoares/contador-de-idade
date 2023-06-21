@@ -1,0 +1,47 @@
+@media (max-width: 800px){
+    main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 630px){
+    section {
+        margin: 0px 20px;
+    }
+    section#dados div{
+        padding: 5px;
+    }
+    section#res div h1 {
+        font-size: 70px;
+    }   
+}
+
+@media (max-width: 450px){
+    main{
+        margin-top: 60px;
+    }
+    section#dados div input{
+        width: 70px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px;
+    } 
+    section#res div h1{
+        font-size: 48px;
+        padding-top: 20px;
+    } 
+    section#res div button{
+        padding: 10px;
+    }  
+}
+@media (max-width: 350px){
+    main{
+        margin-top: 10px;
+        height: 500px;
+    }
+    section#res div h1{
+        font-size: 40px;
+        
+    }    
+}
+
