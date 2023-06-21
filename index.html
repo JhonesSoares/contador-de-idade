@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Contador de idade</title>
+  <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+  <main>
+    <section id="dados">
+      <div>
+        <label for="idia">D I A</label>
+        <input type="text" name="dia" id="idia">
+        <span id="erro_dia"></span>
+      </div>
+      <div>
+        <label for="imes">M Ê S</label>
+        <input type="text" name="mes" id="imes">
+        <span id="erro_mes"></span>
+      </div>
+      <div>
+        <label for="iano">A N O</label>
+        <input type="text" id="iano">
+        <span id="erro_ano"></span>
+      </div>
+    </section>
+
+    <section id="res">
+      <div>
+        <h1><span id="res_ano">--</span>  Anos</h1>
+        <h1><span id="res_mes">--</span>  Meses</h1>
+        <h1><span id="res_dia">--</span>  Dias</h1>
+      </div>
+      <div>
+        <button id="botao_calc"><img src="assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
