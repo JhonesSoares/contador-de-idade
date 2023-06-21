@@ -67,16 +67,16 @@ function calcularIdade(niver){
     let niverData = new Date(niver)
     let dataAtual = new Date();                 
 
-    let diaS = dataAtual.getDate() - niverData.getDate();         //console.log(diaS + ' dias')
-    let meseS = dataAtual.getMonth() - niverData.getMonth();      //console.log(meseS + ' meses')
-    let anoS = dataAtual.getFullYear() - niverData.getFullYear(); //console.log(anoS + ' anos')
+    let diaS = dataAtual.getDate() - niverData.getDate();         console.log(diaS + ' dias')
+    let meseS = dataAtual.getMonth() - niverData.getMonth();      console.log(meseS + ' meses')
+    let anoS = dataAtual.getFullYear() - niverData.getFullYear(); console.log(anoS + ' anos')
     
-    if(diaS < 0 && meseS < 0){//console.log('soma D M')
+    if(diaS < 0 && meseS < 0){ console.log('soma D M')
         diaS = 31 + diaS
         meseS = 11 + meseS
         anoS--
-    } else if(diaS < 0) {//console.log('normal')
-        diaS = 30 + diaS
+    } else if(diaS < 0) { console.log('normal')
+        diaS = 31 + diaS
         meseS = 11
         anoS--
     }else if (meseS <0){
