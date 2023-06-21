@@ -25,6 +25,9 @@
         height: 50px;
         font-size: 20px;
         padding: 10px;
+    }
+    section#dados div span{
+        font-size: 7px;
     } 
     section#res div h1{
         font-size: 48px;
