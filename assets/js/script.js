@@ -63,30 +63,39 @@ function checkInput_ano(){
 }
 
 
-function calcularIdade(niver){
-    let niverData = new Date(niver)
-    let dataAtual = new Date();                 
+function calcularIdade(Nasc){
+    let dataNasc = new Date(Nasc)
+    let dataAtual = new Date();
+    console.log(dataNasc)
+    console.log(dataAtual)
+    
+    let anoAtual = dataAtual.getFullYear()
+    let mesAtual = dataAtual.getMonth() + 1 //JANEIRO É REPRESENTADO POR 0
+    let diaAtual = dataAtual.getDate()
 
-    let diaS = dataAtual.getDate() - niverData.getDate();         console.log(diaS + ' dias')
-    let meseS = dataAtual.getMonth() - niverData.getMonth();      console.log(meseS + ' meses')
-    let anoS = dataAtual.getFullYear() - niverData.getFullYear(); console.log(anoS + ' anos')
+    let anoNasc = dataNasc.getFullYear()
+    let mesNasc = dataNasc.getMonth() + 1 //JANEIRO É REPRESENTADO POR 0
+    let diaNasc = dataNasc.getDate()
+
+    var idade = {};
+    idade.anos = anoAtual - anoNasc
+    idade.mes = mesAtual - mesNasc
+    idade.dias = diaAtual - diaNasc 
     
-    if(diaS < 0 && meseS < 0){ console.log('soma D M')
-        diaS = 31 + diaS
-        meseS = 11 + meseS
-        anoS--
-    } else if(diaS < 0) { console.log('normal')
-        diaS = 31 + diaS
-        meseS = 11
-        anoS--
-    }else if (meseS <0){
-        meseS = 12 + meseS
-        anoS--
-    } 
+    if(idade.dias < 0){
+        let ultimoDiaMesAnterior = new Date(anoAtual, mesAtual - 1, 0).getDate()
+        idade.dias = idade.dias + ultimoDiaMesAnterior
+        idade.mes--
+        
+    } else if(idade.mes < 0){
+        idade.mes = idade.mes + 12
+        idade.anos--
+        
+    }
     
-    resDia.innerHTML = diaS
-    resMes.innerHTML = meseS
-    resAno.innerHTML = anoS
+    resAno.innerHTML = idade.anos
+    resMes.innerHTML = idade.mes
+    resDia.innerHTML = idade.dias   
 }
 
 calc_btn.addEventListener('click', (e)=> {
@@ -94,11 +103,8 @@ calc_btn.addEventListener('click', (e)=> {
     
     if(!checkInput_dia() || !checkInput_mes() || !checkInput_ano()) return   
 
-    let niver = `${mes.value}/${dia.value}/${ano.value}`
-    calcularIdade(niver)
-
-    
-
+    let Nasc = `${mes.value}/${dia.value}/${ano.value}`
+    calcularIdade(Nasc)
 })
 
 
